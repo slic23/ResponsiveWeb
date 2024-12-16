@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mi Portfolio">
+    <link rel="stylesheet" href="css/ponletunombre.css" />
+    <title>Mi Portfolio</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="fonts/fontawesome/stylesheet.css">
+</head>
+<body>
+    <header>
+        <div  onclick="showBurger()" class="burgerResponsive" id="burgerResponsive"><span></span><span></span><span></span></div>
+        <div class="wrap">
+            <div class="logo">
+                <h1>
+                    <a href="#">
+                        <span>Jon Doe</span>
+                    </a>
+                </h1>
+                <p>
+                    <a href="#">
+                        <span>Web Developer</span>
+                    </a>
+                </p>
+            </div>
+            <nav class="menu" id="menu">
+                <ul>
+                    <li class="activo">
+                        <a href="#">
+                            <span>Inicio</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span>Quién soy</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span>Servicios</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span>Blog</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span>Contacto</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="inicio">
+            <div>
+                <img src="img/nubes-700.png"/>
+                <p>LA AMBICIÓN ES EL PRIMER PASO HACIA EL</p>
+                <h3>Éxito</h3>
+                <a class="boton negro" href="#">Reservar</a>
+            </div>
+        </section>
+        <section class="sobreMi">
+            <div clasS="texto">
+                <div>
+                    <h4>
+                        SOBRE MÍ
+                    </h4>
+                    <p>
+                            Lorem ipsum dolor sit amet, consectetur 
+                            adipiscing elit. Pellentesque quis ipsum 
+                            eu dolor tempor viverra. Nulla laoreet 
+                            mollis ligula. Etiam commodo est et augue 
+                            ultricies tempus. Morbi viverra tempor 
+                            arcu non ornare. 
+                            <br><br>
+                            Vestibulum ante ipsum primis 
+                            in faucibus orci luctus et ultrices 
+                            posuere cubilia curae; In hac habitasse 
+                            platea dictumst. Sed magna neque, 
+                            tincidunt vel venenatis vestibulum, 
+                            convallis vel sem.&nbsp;
+                    </p>
+                    <a class="boton negro" href="#">
+                        <span>Leer más</span>
+                    </a>
+                </div>
+            </div>
+            <div class="unaPersona">
+                <img src="img/una-persona.jpg" alt="una persona"/>
+            </div>
+        </section>
+        <section class="servicios">
+            <div class="wrap">
+                <h4>
+                    <span>¿CÓMO PUEDO </span><span>AYUDARTE?</span>
+                </h4>
+                <ul>
+                    <li>
+                        <div>
+                            <a href="#">
+                                <h2>
+                                    Front<br>End
+                                </h2>
+                            </a>
+                            <hr>
+                            <div>
+                                <p>45&nbsp;min</p>
+                                <p>90&nbsp;€/h</p>
+                            </div>
+                            <a class="boton azul" href="#">
+                                <span>Reservar ahora</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <a href="#">
+                                <h2>
+                                    Back<br>End
+                                </h2>
+                            </a>
+                            <hr>
+                            <div>
+                                <p>45&nbsp;min</p>
+                                <p>90&nbsp;€/h</p>
+                            </div>
+                            <a class="boton azul" href="#">
+                                <span>Reservar ahora</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <a href="#">
+                                <h2>
+                                    Web<br>Design
+                                </h2>
+                            </a>
+                            <hr>
+                            <div>
+                                <p>45&nbsp;min</p>
+                                <p>90&nbsp;€/h</p>
+                            </div>
+                            <a class="boton azul" href="#">
+                                <span>Reservar ahora</span>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+                <div>
+                    <a class="boton negro" href="#">
+                        <span>Más servicios</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div>
+            <h6>Contacto</h6>
+            <p>
+                Av. Los Rosales 122<br>
+                28021, Madrid
+            </p>
+            <p>
+                Tel: 914-123-456<br>
+                Fax: 914-123-456
+            </p>
+            <p>
+                <a href="mailto:info@misitio.com">info@misitio.com</a>
+            </p>
+            <ul>
+                <li>
+                    <a class="facebook" href="#"><span>Facebook</span></a>
+                </li>
+                <li>
+                    <a class="tiktok" href="#"><span>TikTok</span></a>
+                </li>
+                <li>
+                    <a class="pinterest" href="#"><span>Pinterest</span></a>
+                </li>
+                <li>
+                    <a class="youtube" href="#"><span>YouTube</span></a>
+                </li>
+            </ul>
+        </div>
+        <div class="formulario">
+            <form>
+                <fieldset>
+                    <input name="nombre" type="text" placeholder="Nombre"value="">
+                    <input name="email" placeholder="Email" type="email" value="">
+                    <input name="phone" type="tel" value="" placeholder="Teléfono">
+                    <textarea rows="4" placeholder="Escribe tu mensaje aquí..."></textarea>
+                    <button class="boton negro">
+                        <span>Enviar</span>
+                    </button>
+                </fieldset>
+            </form>
+        </div>
+        <div>
+            <p>
+                <span>© 2024. Creado por Jon Doe</p>
+        </div>
+    </footer>
+    <script>
+        //Función para mostrar el menú responsive (menuamburguesa)
+        function showBurger(){
+            // Obtiene el elemento por su id
+            let capa = document.getElementById("menu");
+            let icono = document.getElementById("burgerResponsive");
+            // Alternar la clase
+            capa.classList.toggle("opened");
+            icono.classList.toggle("opened");
+        }
+    </script>
+</body>
+</html>

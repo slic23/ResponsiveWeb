@@ -1,0 +1,215 @@
+
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+header .wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.burgerResponsive {
+    display: none;
+}
+
+header .wrap ul {
+    display: flex;
+    list-style-type: none;
+    gap: 20px;
+
+}
+
+header .wrap ul a {
+    text-decoration: none;
+    color: black;
+}
+
+
+header .wrap ul .activo a {
+    color:#57bbbf;
+}
+
+header .wrap .logo a {
+    text-decoration: none;
+    color: black;
+}
+
+.inicio img {
+    position: fixed;
+    top: 100px;
+    background-attachment: fixed;
+
+}
+
+
+.inicio div {
+    background-image: url(img/climb-mountains.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+}
+
+.sobreMi {
+    display: flex;
+    
+}
+
+.sobreMi .texto h4::before {
+    content: "\2015";
+    justify-content: flex-end;
+    padding-left: 30px;
+    
+}
+
+
+.sobreMi .texto h4 {
+    font-size: 34px;
+
+}
+.sobreMi .texto p {
+    font-size: 19px;
+    padding: 20px;
+}
+
+.sobreMi img {
+    width: 92vh;
+}
+
+.sobreMi a span  {
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    margin: 0 auto;
+}
+.sobreMi a {
+    text-decoration: none;
+    width: 300px;
+    text-align: center;
+}
+
+.servicios {
+    background-image:  url(img/blue_mountains.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    
+
+}
+.servicios .wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.servicios .wrap > h4::before {
+ align-self: flex-start;
+ content: '\2015';
+ font-size: 20px;
+
+}
+
+.servicios .wrap > h4 {
+    font-size: 30px;
+}
+
+.servicios .wrap ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    gap: 100px;
+}
+
+.servicios .wrap ul a {
+    text-decoration: none;
+    color: black;
+}
+
+.servicios li {
+    border: 1px solid black;
+    padding: 90px 70px;
+}
+
+.servicios .wrap ul  a h2 {
+    font-size: 39px;
+}
+
+
+.servicios div:last-child {
+    align-self: center;
+    padding: 10px;
+    
+}
+.servicios div:last-child > a {
+    text-decoration: none;
+    color:white;
+    background-color: black;
+}
+
+
+footer {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    
+    grid-template-areas: "primero segundo"
+    "todo todo";
+    background-color: #57bbbf;
+}
+
+footer div:first-child {
+    grid-area: primero;
+
+}
+
+
+footer  div:last-child {
+    grid-area:todo;
+    place-self: center;
+}
+
+footer div:first-child > h6::before  {
+    content: '\2015';
+}
+
+
+footer fieldset {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    gap: 20px;
+    width: 300px;
+}
+
+fieldset input, textarea{
+    width: 300px;
+    padding: 4px 10px;
+}
+
+fieldset button {
+    width: 100px;
+    align-self: flex-end;
+}
+
+li .facebook span::before {
+    visibility: hidden;
+}
+li .facebook span::after {
+    
+    font-family: 'FontAwesome';
+    content: '\f39e';
+}
+
+
+
+
