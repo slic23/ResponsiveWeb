@@ -1,20 +1,22 @@
 
 
-
+body {
+    overflow-x: hidden;
+}
 
 * {
     padding: 0;
     margin: 0;
 }
 
+.burgerResponsive {
+    display: none;
+}
+
 header .wrap {
     display: flex;
     align-items: center;
     justify-content: space-around;
-}
-
-.burgerResponsive {
-    display: none;
 }
 
 header .wrap ul {
@@ -29,6 +31,21 @@ header .wrap ul a {
     color: black;
 }
 
+.inicio .boton  {
+    text-decoration: none;
+    padding: 20px 30px;
+    color: white;
+    background: black;
+}
+
+.servicios .wrap div  div {
+    text-align: center;
+}
+
+.servicios .wrap .azul {
+    background-color:#57bbbf;
+    padding: 5px 10px;
+}
 
 header .wrap ul .activo a {
     color:#57bbbf;
@@ -39,10 +56,40 @@ header .wrap .logo a {
     color: black;
 }
 
+.inicio {
+    position: relative;
+}
 .inicio img {
-    position: fixed;
-    top: 100px;
+    position: absolute;
+    animation: nube 7s infinite  linear 10s ;
     background-attachment: fixed;
+}
+
+@keyframes nube {
+    0% {
+        left: -100%;
+        top: 20%;
+        opacity: 0;
+    }
+
+    20% {
+        left: 10%;
+        top: 30%;
+        opacity: 0.5;
+    }
+
+
+    40% {
+        left: 50%;
+        top: 50%;
+        opacity: 1;
+    }
+
+    60% {
+        left: 100%;
+        top: 40%;
+        opacity: 0.7;
+    }
 
 }
 
@@ -56,6 +103,7 @@ header .wrap .logo a {
     align-items: center;
     height: 100vh;
     justify-content: center;
+    background-attachment: fixed
 }
 
 .sobreMi {
@@ -63,10 +111,11 @@ header .wrap .logo a {
     
 }
 
-.sobreMi .texto h4::before {
+.sobreMi .texto::before {
     content: "\2015";
     justify-content: flex-end;
     padding-left: 30px;
+    font-size: 40px;
     
 }
 
@@ -81,7 +130,6 @@ header .wrap .logo a {
 }
 
 .sobreMi img {
-    width: 92vh;
 }
 
 .sobreMi a span  {
@@ -103,9 +151,6 @@ header .wrap .logo a {
     background-image:  url(img/blue_mountains.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    
-    
-
 }
 .servicios .wrap {
     display: flex;
@@ -113,12 +158,13 @@ header .wrap .logo a {
     gap: 20px;
 }
 
-.servicios .wrap > h4::before {
+.servicios .wrap::before {
  align-self: flex-start;
  content: '\2015';
- font-size: 20px;
+ font-size: 30px;
 
 }
+
 
 .servicios .wrap > h4 {
     font-size: 30px;
@@ -142,7 +188,9 @@ header .wrap .logo a {
 }
 
 .servicios .wrap ul  a h2 {
-    font-size: 39px;
+    color: black;
+    text-align: center;
+    font-size: 42px;
 }
 
 
@@ -165,10 +213,18 @@ footer {
     grid-template-areas: "primero segundo"
     "todo todo";
     background-color: #57bbbf;
+    justify-items: center;
+}
+
+footer div {
+    padding: 20px;
 }
 
 footer div:first-child {
     grid-area: primero;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
 
 }
 
@@ -178,10 +234,10 @@ footer  div:last-child {
     place-self: center;
 }
 
-footer div:first-child > h6::before  {
+footer div:first-child::before  {
     content: '\2015';
+    font-size: 40px;
 }
-
 
 footer fieldset {
     display: flex;
@@ -194,21 +250,167 @@ footer fieldset {
 fieldset input, textarea{
     width: 300px;
     padding: 4px 10px;
+    border:none;
+    border: 2px solid black;
+    background-color: inherit;
+    color: black;
+}
+
+
+input::placeholder, textarea::placeholder {
+    color: black;
 }
 
 fieldset button {
     width: 100px;
     align-self: flex-end;
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
 }
 
-li .facebook span::before {
-    visibility: hidden;
+footer div:first-child ul li span {
+    display: none;
 }
-li .facebook span::after {
-    
+
+li .facebook span {
+    display: none;
+}
+li .facebook::after{
     font-family: 'FontAwesome';
     content: '\f39e';
 }
+
+
+.tiktok::before {
+    font-family: 'FontAwesome';
+    content: '\e07b';
+}
+
+.pinterest::after {
+    font-family: 'FontAwesome';
+    content: '\f0d2';
+}
+
+.youtube::after {
+    font-family: 'FontAwesome';
+    content: '\f431';
+}
+
+
+footer div:first-child ul {
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+}
+
+footer div:first-child a , footer div:first-child p:last-child a  {
+    text-decoration: none;
+    color: black;
+}
+
+footer div:first-child h6 {
+    font-size: 30px;
+}
+
+#burgerResponsive span:first-child::after {
+
+    content: '\2015';
+
+}
+
+#burgerResponsive span:nth-child(2)::after {
+    content: '\2015';
+}
+
+#burgerResponsive span:last-child::after {
+    content: '\2015';
+}
+
+@media only screen  and (max-width:900px) {
+
+    body {
+        width: 100vh;
+    }
+    .burgerResponsive {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        gap: 0;
+        width: auto;
+    }
+    
+    
+    .burgerResponsive span{
+        display: block;
+        padding: 0;
+    }
+    
+header {
+    display: flex;
+    flex-flow: row-reverse;
+    justify-content: space-between;
+}   
+
+.burgerResponsive {
+    padding: 10px;
+}
+
+header div:last-child{
+    padding: 20px;
+}
+
+#menu {
+    display: none;
+}
+
+.sobreMi {
+    flex-direction: column;
+}
+
+.sobreMi  img{
+    width: 100%;
+}
+.servicios .wrap ul {
+    flex-direction: column;
+    align-items: center;
+}
+
+footer {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer div:first-child {
+    grid-area:none;
+}
+
+footer  div:last-child {
+    grid-area:none;
+}
+}
+
+
+@media  only screen and (max-width:600px) {
+    #burgerResponsive.opened {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: 0;
+        z-index: 100;
+        background-color: #57bbbf;
+    }
+
+    #menu.opened{
+        display: flex;
+        flex-direction: column;
+    }
+
+    
+}
+
 
 
 
